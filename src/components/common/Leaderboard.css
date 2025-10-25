@@ -1,0 +1,86 @@
+.leaderboard {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.leaderboard__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+}
+
+.leaderboard__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard__item:hover {
+  background: var(--bg-hover);
+  transform: translateX(4px);
+}
+
+.leaderboard__item--top {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-secondary) 100%);
+}
+
+.leaderboard__rank {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboard__icon--gold {
+  color: #FFD700;
+}
+
+.leaderboard__icon--silver {
+  color: #C0C0C0;
+}
+
+.leaderboard__icon--bronze {
+  color: #CD7F32;
+}
+
+.leaderboard__rank-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.leaderboard__info {
+  flex: 1;
+}
+
+.leaderboard__name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.leaderboard__stats {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.leaderboard__sales {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
