@@ -1,0 +1,91 @@
+.kpi-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.kpi-card--success {
+  border-left: 4px solid var(--success-color);
+}
+
+.kpi-card--warning {
+  border-left: 4px solid var(--warning-color);
+}
+
+.kpi-card--danger {
+  border-left: 4px solid var(--danger-color);
+}
+
+.kpi-card__header {
+  margin-bottom: 16px;
+}
+
+.kpi-card__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-card__body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.kpi-card__value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.kpi-card__trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kpi-card__trend--positive {
+  color: var(--success-color);
+}
+
+.kpi-card__trend--negative {
+  color: var(--danger-color);
+}
+
+.kpi-card__footer {
+  margin-top: 16px;
+}
+
+.kpi-card__progress {
+  width: 100%;
+  height: 6px;
+  background: var(--progress-bg);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.kpi-card__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  transition: width 0.5s ease;
+}
+
+.kpi-card__target {
+  font-size: 12px;
+  color: var(--text-secondary);
+}

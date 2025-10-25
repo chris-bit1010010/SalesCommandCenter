@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.app__main {
+  flex: 1;
+  margin-left: 240px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__main {
+    margin-left: 0;
+  }
+}
+

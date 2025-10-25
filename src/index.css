@@ -1,0 +1,122 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Light theme variables */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-hover: #e9ecef;
+  --card-bg: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --border-color: #e2e8f0;
+  --primary-color: #428bca;
+  --primary-light: #e3f2fd;
+  --primary-dark: #2c5f8d;
+  --success-color: #5cb85c;
+  --success-light: #e8f5e9;
+  --warning-color: #f0ad4e;
+  --danger-color: #d9534f;
+  --danger-dark: #c9302c;
+  --progress-bg: #e9ecef;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-hover: #4a5568;
+  --card-bg: #2d3748;
+  --text-primary: #f7fafc;
+  --text-secondary: #a0aec0;
+  --border-color: #4a5568;
+  --primary-light: #2c5f8d;
+  --progress-bg: #4a5568;
+  --success-light: #2d5f3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn--primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn--secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn--secondary:hover {
+  background: var(--bg-hover);
+}
+
+.btn--sm {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+

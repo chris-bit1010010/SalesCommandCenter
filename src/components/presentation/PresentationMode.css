@@ -1,0 +1,131 @@
+.presentation-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-primary);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.presentation-mode__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.presentation-mode__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.presentation-mode__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.presentation-mode__counter {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+.presentation-mode__btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.presentation-mode__btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+}
+
+.presentation-mode__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.presentation-mode__btn--close {
+  background: var(--danger-color);
+  border-color: var(--danger-color);
+  color: white;
+}
+
+.presentation-mode__btn--close:hover {
+  background: var(--danger-dark);
+}
+
+.presentation-mode__content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.presentation-mode__shortcuts {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.presentation-mode__shortcuts:hover {
+  opacity: 1;
+}
+
+.presentation-mode__shortcuts kbd {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .presentation-mode__header {
+    padding: 12px 16px;
+  }
+
+  .presentation-mode__title {
+    font-size: 16px;
+  }
+
+  .presentation-mode__counter {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  .presentation-mode__shortcuts {
+    font-size: 12px;
+    padding: 8px 16px;
+    bottom: 10px;
+  }
+}
