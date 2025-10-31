@@ -44,7 +44,7 @@ An interactive presentation tool combined with a real-time dashboard for sales a
 - **Build Tool**: Vite 7.1.7
 - **Routing**: React Router DOM 7.1.3
 - **Charts**: Recharts 2.15.0
-- **Icons**: Lucide React 0.469.0
+- **Icons**: Lucide React 0.263.0
 - **Styling**: Tailwind CSS 3.x
 - **Real-time**: Socket.IO Client 4.8.2 (mock implementation)
 
