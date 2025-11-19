@@ -19,18 +19,18 @@ export function ChartPanel({
   const DataComponent = type === 'line' ? Line : Bar;
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors ${className}`}>
+    <div className={`bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors border border-transparent dark:border-deep-dark-50 ${className}`}>
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <Chart data={data}>
-          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-300 dark:stroke-gray-700" />
+          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-300 dark:stroke-deep-dark-50" />
           <XAxis 
             dataKey="name" 
-            className="text-gray-600 dark:text-gray-400"
+            className="text-gray-600 dark:text-gray-300"
             tick={{ fill: 'currentColor' }}
           />
           <YAxis 
-            className="text-gray-600 dark:text-gray-400"
+            className="text-gray-600 dark:text-gray-300"
             tick={{ fill: 'currentColor' }}
           />
           <Tooltip 

@@ -12,8 +12,8 @@
 }
 
 .dark {
-  --tooltip-bg: #1f2937;
-  --tooltip-border: #374151;
+  --tooltip-bg: #0c0c10;
+  --tooltip-border: #1a1a1f;
 }
 
 * {
@@ -24,6 +24,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+body.dark {
+  background-color: #09090d;
 }
 
 #root {

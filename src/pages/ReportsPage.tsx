@@ -18,7 +18,7 @@ export function ReportsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-deep-dark-500 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex items-center gap-3">
@@ -27,7 +27,7 @@ export function ReportsPage() {
               Reports Library
             </h1>
           </div>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
             Searchable library of saved reports and analytics
           </p>
         </div>
@@ -42,19 +42,19 @@ export function ReportsPage() {
               placeholder="Search reports..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+              className="w-full pl-10 pr-4 py-3 bg-white dark:bg-deep-dark-200 border border-gray-300 dark:border-deep-dark-50 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
             />
           </div>
 
           {/* Tag Filter */}
           <div className="flex items-center gap-2 flex-wrap">
-            <Tag className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <Tag className="w-4 h-4 text-gray-500 dark:text-gray-300" />
             <button
               onClick={() => setSelectedTag(null)}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                 selectedTag === null
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-deep-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
               All
@@ -66,7 +66,7 @@ export function ReportsPage() {
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   selectedTag === tag
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                    : 'bg-gray-200 dark:bg-deep-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
               >
                 {tag}
@@ -80,7 +80,7 @@ export function ReportsPage() {
           {filteredReports.map(report => (
             <div
               key={report.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-all cursor-pointer"
+              className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 hover:shadow-lg transition-all cursor-pointer"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export function ReportsPage() {
                     report.type === 'sales' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300' :
                     report.type === 'marketing' ? 'bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300' :
                     report.type === 'team' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300' :
-                    'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                    'bg-gray-100 dark:bg-deep-dark-300 text-gray-700 dark:text-gray-300'
                   }`}>
                     {report.type}
                   </span>
@@ -99,7 +99,7 @@ export function ReportsPage() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {report.title}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                 {report.description}
               </p>
 
@@ -108,7 +108,7 @@ export function ReportsPage() {
                   {report.tags.map(tag => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded"
+                      className="text-xs px-2 py-1 bg-gray-100 dark:bg-deep-dark-300 text-gray-600 dark:text-gray-300 rounded"
                     >
                       {tag}
                     </span>
@@ -116,7 +116,7 @@ export function ReportsPage() {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-deep-dark-50">
                 <p className="text-xs text-gray-500 dark:text-gray-500">
                   Created: {new Date(report.createdAt).toLocaleDateString()}
                 </p>
@@ -128,7 +128,7 @@ export function ReportsPage() {
         {filteredReports.length === 0 && (
           <div className="text-center py-12">
             <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600 dark:text-gray-300">
               No reports found matching your criteria
             </p>
           </div>

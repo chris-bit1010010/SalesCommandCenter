@@ -86,10 +86,10 @@ export function PresentationPage() {
       case 'products':
         return (
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+            <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-8">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-deep-dark-50">
                     <th className="text-left py-4 text-gray-900 dark:text-white">Product</th>
                     <th className="text-right py-4 text-gray-900 dark:text-white">Sales</th>
                     <th className="text-right py-4 text-gray-900 dark:text-white">Revenue</th>
@@ -98,7 +98,7 @@ export function PresentationPage() {
                 </thead>
                 <tbody>
                   {mockProducts.map((product) => (
-                    <tr key={product.id} className="border-b border-gray-100 dark:border-gray-700">
+                    <tr key={product.id} className="border-b border-gray-100 dark:border-deep-dark-50">
                       <td className="py-4 text-gray-900 dark:text-white font-medium">{product.name}</td>
                       <td className="text-right py-4 text-gray-700 dark:text-gray-300">{product.sales.toLocaleString()}</td>
                       <td className="text-right py-4 text-gray-700 dark:text-gray-300">${(product.revenue / 1000).toFixed(0)}k</td>

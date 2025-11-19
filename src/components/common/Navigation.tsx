@@ -22,7 +22,7 @@ export function Navigation() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md transition-colors">
+    <nav className="bg-white dark:bg-deep-dark-200 shadow-md transition-colors border-b border-transparent dark:border-deep-dark-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -41,8 +41,8 @@ export function Navigation() {
                       to={path}
                       className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         isActive
-                          ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                          ? 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-200'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-deep-dark-300'
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -56,7 +56,7 @@ export function Navigation() {
           
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-deep-dark-300 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? (

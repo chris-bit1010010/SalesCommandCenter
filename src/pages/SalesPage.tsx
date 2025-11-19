@@ -11,7 +11,7 @@ export function SalesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-deep-dark-500 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex items-center gap-3">
@@ -20,7 +20,7 @@ export function SalesPage() {
               Sales Analytics
             </h1>
           </div>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
             Detailed sales performance analysis and trends
           </p>
         </div>
@@ -38,14 +38,14 @@ export function SalesPage() {
           />
 
           {/* Top Products */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors">
+          <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Top Products by Revenue
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-deep-dark-50">
                     <th className="text-left py-3 px-4 text-gray-900 dark:text-white">Product Name</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">Sales Volume</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">Revenue</th>
@@ -54,7 +54,7 @@ export function SalesPage() {
                 </thead>
                 <tbody>
                   {mockProducts.map((product) => (
-                    <tr key={product.id} className="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+                    <tr key={product.id} className="border-b border-gray-100 dark:border-deep-dark-50 hover:bg-gray-50 dark:hover:bg-deep-dark-300">
                       <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">
                         {product.name}
                       </td>

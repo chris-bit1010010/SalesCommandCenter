@@ -86,10 +86,10 @@ export function PresenterViewPage() {
 
       case 'products':
         return (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+          <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-4">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-700">
+                <tr className="border-b border-gray-200 dark:border-deep-dark-50">
                   <th className="text-left py-2 text-gray-900 dark:text-white">Product</th>
                   <th className="text-right py-2 text-gray-900 dark:text-white">Sales</th>
                   <th className="text-right py-2 text-gray-900 dark:text-white">Revenue</th>
@@ -98,7 +98,7 @@ export function PresenterViewPage() {
               </thead>
               <tbody>
                 {mockProducts.map((product) => (
-                  <tr key={product.id} className="border-b border-gray-100 dark:border-gray-700">
+                  <tr key={product.id} className="border-b border-gray-100 dark:border-deep-dark-50">
                     <td className="py-2 text-gray-900 dark:text-white">{product.name}</td>
                     <td className="text-right py-2 text-gray-700 dark:text-gray-300">{product.sales.toLocaleString()}</td>
                     <td className="text-right py-2 text-gray-700 dark:text-gray-300">${(product.revenue / 1000).toFixed(0)}k</td>
@@ -126,14 +126,14 @@ export function PresenterViewPage() {
   const nextSlideIndex = (currentSlide + 1) % slides.length;
 
   return (
-    <div className="fixed inset-0 bg-gray-50 dark:bg-gray-900 z-50">
+    <div className="fixed inset-0 bg-gray-50 dark:bg-deep-dark-400 z-50">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-6 py-4">
+      <div className="bg-white dark:bg-deep-dark-200 border-b border-gray-200 dark:border-deep-dark-50 px-6 py-4">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">Presenter View</h1>
           <button
             onClick={exitPresentation}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-deep-dark-300 rounded-lg transition-colors"
             aria-label="Exit presenter view"
           >
             <X className="w-5 h-5 text-gray-700 dark:text-gray-300" />
@@ -145,11 +145,11 @@ export function PresenterViewPage() {
         <div className="grid grid-cols-2 gap-6 p-6 h-full">
           {/* Left Column - Current Slide */}
           <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+            <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-4">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Current Slide ({currentSlide + 1}/{slides.length})
               </h2>
-              <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
+              <div className="bg-gray-100 dark:bg-deep-dark-400 rounded-lg p-4">
                 <h3 className="text-md font-semibold text-gray-900 dark:text-white mb-4">
                   {currentSlideData.title}
                 </h3>
@@ -158,7 +158,7 @@ export function PresenterViewPage() {
             </div>
 
             {/* Speaker Notes */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                 Speaker Notes
               </h3>
@@ -170,12 +170,12 @@ export function PresenterViewPage() {
 
           {/* Right Column - Next Slide Preview & Controls */}
           <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+            <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-4">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Next Slide Preview
               </h2>
-              <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 opacity-75">
-                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-400 mb-4">
+              <div className="bg-gray-100 dark:bg-deep-dark-400 rounded-lg p-4 opacity-75">
+                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
                   {slides[nextSlideIndex].title}
                 </h3>
                 <div className="transform scale-75 origin-top-left">
@@ -185,25 +185,25 @@ export function PresenterViewPage() {
             </div>
 
             {/* Timer and Stats */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Presentation Info
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">Current Time:</span>
+                  <span className="text-gray-600 dark:text-gray-300">Current Time:</span>
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {new Date().toLocaleTimeString()}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">Slide:</span>
+                  <span className="text-gray-600 dark:text-gray-300">Slide:</span>
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {currentSlide + 1} of {slides.length}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">Progress:</span>
+                  <span className="text-gray-600 dark:text-gray-300">Progress:</span>
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {Math.round(((currentSlide + 1) / slides.length) * 100)}%
                   </span>
@@ -215,11 +215,11 @@ export function PresenterViewPage() {
       </div>
 
       {/* Navigation Controls */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4">
+      <div className="absolute bottom-0 left-0 right-0 bg-white dark:bg-deep-dark-200 border-t border-gray-200 dark:border-deep-dark-50 p-4">
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prevSlide}
-            className="flex items-center gap-2 px-6 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-6 py-2 bg-gray-200 dark:bg-deep-dark-300 hover:bg-gray-300 dark:hover:bg-deep-dark-200 text-gray-900 dark:text-white rounded-lg transition-colors"
             disabled={currentSlide === 0}
           >
             <ChevronLeft className="w-5 h-5" />
@@ -234,7 +234,7 @@ export function PresenterViewPage() {
                 className={`w-3 h-3 rounded-full transition-colors ${
                   index === currentSlide 
                     ? 'bg-blue-600' 
-                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                    : 'bg-gray-300 dark:bg-deep-dark-100 hover:bg-gray-400 dark:hover:bg-deep-dark-100'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

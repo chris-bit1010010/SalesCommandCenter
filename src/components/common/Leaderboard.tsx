@@ -17,7 +17,7 @@ export function Leaderboard({ members, className = '' }: LeaderboardProps) {
   };
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors ${className}`}>
+    <div className={`bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors border border-transparent dark:border-deep-dark-50 ${className}`}>
       <div className="flex items-center gap-2 mb-6">
         <Trophy className="w-6 h-6 text-yellow-500" />
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Team Leaderboard</h3>
@@ -31,13 +31,13 @@ export function Leaderboard({ members, className = '' }: LeaderboardProps) {
           return (
             <div 
               key={member.id}
-              className="flex items-center gap-4 p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+              className="flex items-center gap-4 p-3 rounded-lg bg-gray-50 dark:bg-deep-dark-300 hover:bg-gray-100 dark:hover:bg-deep-dark-100 transition-colors"
             >
               <div className="flex items-center justify-center w-8 h-8">
                 {index < 3 ? (
                   <Trophy className={`w-5 h-5 ${getMedalColor(index)}`} />
                 ) : (
-                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-300">
                     #{index + 1}
                   </span>
                 )}
@@ -59,7 +59,7 @@ export function Leaderboard({ members, className = '' }: LeaderboardProps) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                  <div className="flex-1 bg-gray-200 dark:bg-deep-dark-400 rounded-full h-2">
                     <div
                       className={`h-2 rounded-full transition-all ${
                         isOverTarget ? 'bg-green-500' : 'bg-blue-500'
@@ -67,7 +67,7 @@ export function Leaderboard({ members, className = '' }: LeaderboardProps) {
                       style={{ width: `${Math.min(achievement, 100)}%` }}
                     />
                   </div>
-                  <span className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                  <span className="text-xs text-gray-600 dark:text-gray-300 whitespace-nowrap">
                     {member.deals} deals
                   </span>
                 </div>

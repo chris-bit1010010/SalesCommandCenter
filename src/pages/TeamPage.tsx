@@ -12,7 +12,7 @@ export function TeamPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-deep-dark-500 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex items-center gap-3">
@@ -21,7 +21,7 @@ export function TeamPage() {
               Team Performance
             </h1>
           </div>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
             Individual performance metrics and team leaderboards
           </p>
         </div>
@@ -33,14 +33,14 @@ export function TeamPage() {
           </div>
 
           {/* Activity Heatmap */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors">
+          <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Weekly Activity Summary
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-deep-dark-50">
                     <th className="text-left py-3 px-4 text-gray-900 dark:text-white">Day</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">Calls</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">Meetings</th>
@@ -49,7 +49,7 @@ export function TeamPage() {
                 </thead>
                 <tbody>
                   {activityData.map((day) => (
-                    <tr key={day.day} className="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+                    <tr key={day.day} className="border-b border-gray-100 dark:border-deep-dark-50 hover:bg-gray-50 dark:hover:bg-deep-dark-300">
                       <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">
                         {day.day}
                       </td>
@@ -70,7 +70,7 @@ export function TeamPage() {
           </div>
 
           {/* Individual Stats */}
-          <div className="lg:col-span-2 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors">
+          <div className="lg:col-span-2 bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Team Member Details
             </h3>
@@ -80,26 +80,26 @@ export function TeamPage() {
                 return (
                   <div 
                     key={member.id}
-                    className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+                    className="p-4 rounded-lg border border-gray-200 dark:border-deep-dark-50 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
                   >
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
                       {member.name}
                     </h4>
                     <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-400">Sales:</span>
+                        <span className="text-gray-600 dark:text-gray-300">Sales:</span>
                         <span className="font-medium text-gray-900 dark:text-white">
                           ${(member.sales / 1000).toFixed(0)}k
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-400">Deals:</span>
+                        <span className="text-gray-600 dark:text-gray-300">Deals:</span>
                         <span className="font-medium text-gray-900 dark:text-white">
                           {member.deals}
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-400">Target:</span>
+                        <span className="text-gray-600 dark:text-gray-300">Target:</span>
                         <span className={`font-medium ${
                           achievement >= 100 ? 'text-green-600 dark:text-green-400' : 'text-gray-900 dark:text-white'
                         }`}>

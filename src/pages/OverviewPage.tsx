@@ -10,7 +10,7 @@ export function OverviewPage() {
   const { kpis, isConnected } = useRealTimeData(mockKPIs, true);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-deep-dark-500 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -19,15 +19,15 @@ export function OverviewPage() {
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                 Sales Command Center
               </h1>
-              <p className="mt-2 text-gray-600 dark:text-gray-400">
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
                 Real-time sales analytics and performance dashboard
               </p>
             </div>
             <div className="flex items-center gap-2">
               <div className={`flex items-center gap-2 px-3 py-1 rounded-full ${
                 isConnected 
-                  ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300' 
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
+                  ? 'bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300' 
+                  : 'bg-gray-100 dark:bg-deep-dark-200 text-gray-700 dark:text-gray-300'
               }`}>
                 <Activity className={`w-4 h-4 ${isConnected ? 'animate-pulse' : ''}`} />
                 <span className="text-sm font-medium">
@@ -89,7 +89,7 @@ export function OverviewPage() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-8 text-center text-sm text-gray-600 dark:text-gray-300">
           <p>Data updates every 5 seconds • Last updated: {new Date().toLocaleTimeString()}</p>
         </div>
       </div>

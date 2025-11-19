@@ -34,9 +34,9 @@ export function KPICard({ kpi, className = '' }: KPICardProps) {
   const progress = getProgress();
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors ${className}`}>
+    <div className={`bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors border border-transparent dark:border-deep-dark-50 ${className}`}>
       <div className="flex justify-between items-start mb-4">
-        <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">{kpi.title}</h3>
+        <h3 className="text-sm font-medium text-gray-600 dark:text-gray-300">{kpi.title}</h3>
         {kpi.change !== undefined && (
           <div className={`flex items-center gap-1 ${getTrendColor()}`}>
             {getTrendIcon()}
@@ -55,11 +55,11 @@ export function KPICard({ kpi, className = '' }: KPICardProps) {
 
       {progress !== null && (
         <div className="mt-4">
-          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
+          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-300 mb-1">
             <span>Progress</span>
             <span>{progress.toFixed(0)}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div className="w-full bg-gray-200 dark:bg-deep-dark-400 rounded-full h-2">
             <div
               className={`h-2 rounded-full transition-all ${
                 progress >= 90 ? 'bg-green-500' : progress >= 70 ? 'bg-blue-500' : 'bg-yellow-500'

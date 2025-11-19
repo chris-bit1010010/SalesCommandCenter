@@ -21,7 +21,7 @@ export function MarketingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-deep-dark-500 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex items-center gap-3">
@@ -30,21 +30,21 @@ export function MarketingPage() {
               Marketing Performance
             </h1>
           </div>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
             Campaign ROI, lead generation, and conversion metrics
           </p>
         </div>
 
         <div className="space-y-6">
           {/* Campaign ROI */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors">
+          <div className="bg-white dark:bg-deep-dark-200 rounded-lg shadow-md p-6 transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Campaign Performance
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-deep-dark-50">
                     <th className="text-left py-3 px-4 text-gray-900 dark:text-white">Campaign Name</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">ROI</th>
                     <th className="text-right py-3 px-4 text-gray-900 dark:text-white">Leads</th>
@@ -54,7 +54,7 @@ export function MarketingPage() {
                 </thead>
                 <tbody>
                   {mockCampaigns.map((campaign) => (
-                    <tr key={campaign.id} className="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+                    <tr key={campaign.id} className="border-b border-gray-100 dark:border-deep-dark-50 hover:bg-gray-50 dark:hover:bg-deep-dark-300">
                       <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">
                         {campaign.name}
                       </td>
